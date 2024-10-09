@@ -1,0 +1,26 @@
+# OS-generated files
+.DS_Store*
+
+# Eclipse project files
+.classpath
+.project
+.settings
+.metadata
+
+# IntelliJ files
+.idea/
+*.iml
+
+# Output dir
+**/target
+
+# Node
+package-lock.json
+**/node
+**/node_modules
+
+# Resolved through webjars on every build
+core-js/src/main/javascript/lib/jQuery/jquery.js
+core-js/src/main/javascript/lib/jQuery/jquery.ui.js
+core-js/src/main/javascript/lib/fancybox/jquery.fancybox.js
+core-js/src/main/javascript/lib/fancybox/jquery.fancybox.css

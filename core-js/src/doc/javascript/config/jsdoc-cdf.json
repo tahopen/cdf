@@ -1,0 +1,47 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+
+  "source": {
+    "include": [
+      "${basedir}/src/main/javascript/cdf",
+      "${basedir}/src/main/javascript/cdf/README.md"
+    ],
+
+    "exclude": [
+      "${basedir}/src/main/javascript/cdf-legacy",
+      "${basedir}/src/main/javascript/lib"
+    ],
+
+    "includePattern": ".+\\.js(doc)?$"
+  },
+
+  "plugins": [
+    "plugins/markdown",
+    "${basedir}/src/doc/javascript/config/customPlugins/defineTags",
+    "${basedir}/src/doc/javascript/config/customPlugins/eventHandlers"
+  ],
+
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": false
+  },
+
+  "opts": {
+    "template": "${docjs.config.template.directory}",
+    "encoding": "utf8",
+    "outputSourceFiles": false,
+    "recurse": true,
+    "private": false,
+
+    "githubConfig": {
+      "name": "cdf",
+      "url": "https://github.com/webdetails/cdf/",
+      "company": "webdetails",
+      "branch": "${docjs.config.github.branch}"
+    },
+
+    "layoutFile": "layout.tmpl"
+  }
+}

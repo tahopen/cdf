@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.tahopen</groupId>
+    <artifactId>cdf-plugin</artifactId>
+    <version>0.1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>cdf-core-js</artifactId>
+  <version>0.1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <webjars.target.directory>${build.dependenciesDirectory}/META-INF/resources/webjars</webjars.target.directory>
+    <js.project.list>ccc,jquery,jquery-ui,fancyapps__fancybox</js.project.list>
+    <karma.legacy.file.config>karma.ci.conf.legacy.js</karma.legacy.file.config>
+
+    <docjs.config.file>jsdoc-cdf.json</docjs.config.file>
+    <docjs.config.github.branch>master</docjs.config.github.branch>
+    <docjs.config.template.directory>${project.basedir}/src/doc/javascript/template</docjs.config.template.directory>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.tahopen.ctools</groupId>
+      <artifactId>ccc</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>jquery</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>jquery-ui</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.webjars.npm</groupId>
+      <artifactId>fancyapps__fancybox</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- copy jquery for tests and lib-->
+      <plugin>
+        <groupId>com.coderplus.maven.plugins</groupId>
+        <artifactId>copy-rename-maven-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <id>copy-jquery</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <fileSets>
+                <set>
+                  <sourceFile>${webjars.target.directory}/jquery/${jquery.version}/dist/jquery.js</sourceFile>
+                  <destinationFile>${project.basedir}/src/main/javascript/lib/jQuery/jquery.js</destinationFile>
+                </set>
+                <set>
+                  <sourceFile>${webjars.target.directory}/jquery-ui/${jquery-ui.version}/jquery-ui.js</sourceFile>
+                  <destinationFile>${project.basedir}/src/main/javascript/lib/jQuery/jquery.ui.js</destinationFile>
+                </set>
+                <set>
+                  <sourceFile>${webjars.target.directory}/fancyapps__fancybox/${fancyapps__fancybox.version}/dist/jquery.fancybox.js</sourceFile>
+                  <destinationFile>${project.basedir}/src/main/javascript/lib/fancybox/jquery.fancybox.js</destinationFile>
+                </set>
+                <set>
+                  <sourceFile>${webjars.target.directory}/fancyapps__fancybox/${fancyapps__fancybox.version}/dist/jquery.fancybox.css</sourceFile>
+                  <destinationFile>${project.basedir}/src/main/javascript/lib/fancybox/jquery.fancybox.css</destinationFile>
+                </set>
+              </fileSets>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>javascript-legacy-tests</id>
+            <phase>${javascript-test_karma-phase}</phase>
+            <goals>
+              <goal>karma</goal>
+            </goals>
+            <configuration>
+              <karmaConfPath>${build.javascriptTestConfigDirectory}/${karma.legacy.file.config}</karmaConfPath>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
