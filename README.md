@@ -1,4 +1,4 @@
-# Community Dashboard Framework
+# Tahopen Community Dashboard Framework
 
 **CDF** is a Dashboard framework that allows custom dashboards to be built
 
