@@ -35,6 +35,7 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>cpf-tahopen</artifactId>
+      <version>0.1.0.0-SNAPSHOT</version>  
       <scope>runtime</scope>
       <exclusions>
         <exclusion>
