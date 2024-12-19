@@ -35,7 +35,7 @@
         <type>zip</type>
       </dependency>
       <dependency>
-        <groupId>pentaho</groupId>
+        <groupId>org.tahopen</groupId>
         <artifactId>cdf-tahopen-js</artifactId>
         <version>${project.version}</version>
         <type>zip</type>
