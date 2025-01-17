@@ -14,7 +14,7 @@
     <dependency.javax.ws.rs-api.revision>2.0</dependency.javax.ws.rs-api.revision>
     <dependency.google-collections.revision>1.0</dependency.google-collections.revision>
     <dependency.jersey-common.revision>2.22.2</dependency.jersey-common.revision>
-    <platform.version>0.1.0.0-SNAPSHOT</platform.version>
+    <platform.version>0.1.0.0</platform.version>
   </properties>
   <dependencies>
     <dependency>
@@ -24,7 +24,7 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>cpf-tahopen</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version> 
+      <version>0.1.0.0</version> 
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>

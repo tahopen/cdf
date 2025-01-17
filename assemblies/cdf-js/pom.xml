@@ -11,7 +11,7 @@
   <version>0.1.0.0</version>
   <packaging>pom</packaging>
   <properties>
-    <js.project.list>cdf-core-js,cdf-tahopen-js,ccc</js.project.list>
+    <js.project.list>cdf-core-js,cdf-pentaho-js,ccc</js.project.list>
     <global.require.file>cdf-require-js-cfg.js</global.require.file>
     <requirejs.config.files.pattern>**/*-require-js-cfg.js</requirejs.config.files.pattern>
   </properties>
@@ -31,6 +31,7 @@
     <dependency>
       <groupId>org.tahopen.ctools</groupId>
       <artifactId>ccc</artifactId>
+      <version>0.1.0.0</version>  
       <type>zip</type>
     </dependency>
   </dependencies>
