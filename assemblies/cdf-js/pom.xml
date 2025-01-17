@@ -5,10 +5,10 @@
   <parent>
     <groupId>org.tahopen</groupId>
     <artifactId>cdf-plugin-assemblies</artifactId>
-    <version>0.1.0.0-SNAPSHOT</version>
+    <version>0.1.0.0</version>
   </parent>
   <artifactId>tahopen-cdf-js</artifactId>
-  <version>0.1.0.0-SNAPSHOT</version>
+  <version>0.1.0.0</version>
   <packaging>pom</packaging>
   <properties>
     <js.project.list>cdf-core-js,cdf-tahopen-js,ccc</js.project.list>
@@ -19,13 +19,13 @@
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>cdf-core-js</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version>    
+      <version>0.1.0.0</version>    
       <type>zip</type>
     </dependency>
     <dependency>
       <groupId>org.tahopen</groupId>
       <artifactId>cdf-tahopen-js</artifactId>
-      <version>0.1.0.0-SNAPSHOT</version>  
+      <version>0.1.0.0</version>  
       <type>zip</type>
     </dependency>
     <dependency>
