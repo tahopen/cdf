@@ -6,7 +6,7 @@
 
 #### Pre-requisites for building the project:
 * Maven, version 3+
-* Java JDK 1.8
+* Java JDK 11
 
 #### Building it
 
