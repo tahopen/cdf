@@ -14,5 +14,9 @@ This is a maven project, and to build it use the following command
 ```
 export OPENSSL_CONF=/dev/null
 mvn clean install
+
+or
+
+mvn install -DskipTests -Drequirejs.skip=true -Drequirejs.optimize.skip=true
 ```
 The build result will be a Tahopen Plugin located in *assemblies/cdf/target/tahopen-cdf-**.zip*. Then, this package can be dropped inside your system folder.
