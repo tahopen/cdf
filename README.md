@@ -17,6 +17,6 @@ mvn clean install
 
 or
 
-mvn install -DskipTests -Drequirejs.skip=true -Drequirejs.optimize.skip=true
+mvn clean install -DskipTests
 ```
 The build result will be a Tahopen Plugin located in *assemblies/cdf/target/tahopen-cdf-**.zip*. Then, this package can be dropped inside your system folder.
